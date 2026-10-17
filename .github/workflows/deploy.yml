@@ -1,4 +1,3 @@
-
 name: Deploy WordSeek to Heroku
 
 on:
@@ -21,10 +20,15 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
 
       - name: Install Heroku CLI
         run: npm install -g heroku
+
+      - name: Configure Heroku container stack
+        env:
+          HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
+        run: heroku stack:set container --app wordseek
 
       - name: Login to Heroku Container Registry
         env:
@@ -35,11 +39,11 @@ jobs:
         run: docker build -t registry.heroku.com/wordseek/worker .
 
       - name: Push image to Heroku
-        run: docker push registry.heroku.com/wordseek/worker
         env:
           HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
+        run: docker push registry.heroku.com/wordseek/worker
 
       - name: Release worker
-        run: heroku container:release worker --app wordseek
         env:
           HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
+        run: heroku container:release worker --app wordseek
