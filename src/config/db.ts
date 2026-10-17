@@ -29,10 +29,7 @@ export const db = new Kysely<DB>({
   plugins: [new CamelCasePlugin(), new DeduplicateJoinsPlugin()],
   log(event: LogEvent) {
     if (event.level === "error") {
-      logger.error("Database query failed", {
-        error: event.error,
-        query: event.query,
-      });
+      logger.error("Database query failed");
     }
   },
 });
