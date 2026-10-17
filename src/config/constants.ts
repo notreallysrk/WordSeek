@@ -2,7 +2,7 @@ import { env } from "./env";
 
 export const UPDATES_CHANNEL = env.UPDATES_CHANNEL;
 export const DISCUSSION_GROUP = env.DISCUSSION_GROUP;
-export const DONATION_LINK = "https://t.me/OfficialArchon";
+export const DONATION_LINK = "https://t.me/ArchonOfficial";
 
 export const allowedChatSearchKeys = ["global", "group"] as const;
 export const allowedChatTimeKeys = [
