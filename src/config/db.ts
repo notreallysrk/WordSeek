@@ -8,7 +8,6 @@ import {
 import pg from "pg";
 import type { DB } from "../database-schemas";
 import { getDbConnectionString, getDbSslConfig } from "./database-url";
-import { env } from "./env";
 import { logger } from "./logger";
 
 const { Pool } = pg;
@@ -27,10 +26,7 @@ const dialect = new PostgresDialect({
 
 export const db = new Kysely<DB>({
   dialect,
-  plugins: [
-    new CamelCasePlugin(),
-    new DeduplicateJoinsPlugin(),
-  ],
+  plugins: [new CamelCasePlugin(), new DeduplicateJoinsPlugin()],
   log(event: LogEvent) {
     if (event.level === "error") {
       logger.error("Database query failed", {
