@@ -49,45 +49,45 @@ export function getMainHelpKeyboard(
 ) {
   const keyboard = new InlineKeyboard()
     .text(
-      formatActiveButton("How to Play", active === "HOWTO"),
+      formatActiveButton("Hᴏᴡ Tᴏ Pʟᴀʏ", active === "HOWTO"),
       HELP_ACTIONS.HOWTO,
     )
-    .style(active === "HOWTO" ? "primary" : undefined)
+    .style(active === "HOWTO" ? "success" : undefined)
     .text(
-      formatActiveButton("Leaderboard & Scores", active === "SCORES"),
+      formatActiveButton("Lᴇᴀᴅᴇʀʙᴏᴀʀᴅ", active === "SCORES"),
       HELP_ACTIONS.SCORES,
     )
     .style(active === "SCORES" ? "primary" : undefined)
     .row()
     .text(
-      formatActiveButton("Group Settings", active === "GROUP"),
+      formatActiveButton("Gʀᴏᴜᴘ", active === "GROUP"),
       HELP_ACTIONS.GROUP,
     )
     .style(active === "GROUP" ? "primary" : undefined)
     .text(
-      formatActiveButton("Other Commands", active === "OTHER"),
+      formatActiveButton("Oᴛʜᴇʀ", active === "OTHER"),
       HELP_ACTIONS.OTHER,
     )
-    .style(active === "OTHER" ? "primary" : undefined);
+    .style(active === "OTHER" ? "success" : undefined);
 
   if (shouldShowAdmin) {
     keyboard
       .row()
       .text(
-        formatActiveButton("👑 Admin Commands", active === "ADMIN"),
+        formatActiveButton("Aᴅᴍɪɴ", active === "ADMIN"),
         HELP_ACTIONS.ADMIN,
       )
       .style(active === "ADMIN" ? "primary" : undefined);
   }
-  keyboard.url("GitHub Repo", "https://github.com/bisug/TG-WordGame");
-  keyboard.row().url("📢 Updates", UPDATES_CHANNEL);
-  keyboard.url("💓 Donate", DONATION_LINK).success();
-  keyboard.url("💬 Discussion", DISCUSSION_GROUP);
+  keyboard.url("GɪᴛHᴜʙ Rᴇᴘᴏ", "https://github.com/TeamArchon");
+  keyboard.row().url("📢 Uᴘᴅᴀᴛᴇs", UPDATES_CHANNEL);
+  keyboard.url("💓 Dᴏɴᴀᴛᴇ", DONATION_LINK).success();
+  keyboard.url("💬 Dɪsᴄᴜssɪᴏɴ", DISCUSSION_GROUP);
 
   if (active !== "HOWTO") {
-    keyboard.row().text("⬅️ Back to Main Help", HELP_ACTIONS.HOWTO);
+    keyboard.row().text("Hᴇʟᴘ Mᴇɴᴜ", HELP_ACTIONS.HOWTO);
   } else {
-    keyboard.row().text("🔙 Back to Start", HELP_ACTIONS.START);
+    keyboard.row().text("Bᴀᴄᴋ", HELP_ACTIONS.START);
   }
 
   return keyboard;
@@ -134,7 +134,7 @@ export function getHowToPlayMessage() {
   - If a normal game is running, end it before using /daily
   - If Daily is active, use /pausedaily to play normal WordSeek again</blockquote>
   
-<i>This bot is a fork of the original <a href="https://t.me/WordSeekBot">WordSeek</a> by <a href="https://github.com/binamralamsal">Binamra Lamsal</a>.</i>`;
+<i>Tʜɪs Bᴏᴛ Is Mᴀᴅᴇ Bʏ: @TeamArchon.</i>`;
 }
 
 export function getScoresMessage() {
