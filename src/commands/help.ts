@@ -57,13 +57,13 @@ export function getMainHelpKeyboard(
       formatActiveButton("Lᴇᴀᴅᴇʀʙᴏᴀʀᴅ", active === "SCORES"),
       HELP_ACTIONS.SCORES,
     )
-    .style(active === "SCORES" ? "primary" : undefined)
+    .style(active === "SCORES" ? "success" : undefined)
     .row()
     .text(
       formatActiveButton("Gʀᴏᴜᴘ", active === "GROUP"),
       HELP_ACTIONS.GROUP,
     )
-    .style(active === "GROUP" ? "primary" : undefined)
+    .style(active === "GROUP" ? "success" : undefined)
     .text(
       formatActiveButton("Oᴛʜᴇʀ", active === "OTHER"),
       HELP_ACTIONS.OTHER,
@@ -77,7 +77,7 @@ export function getMainHelpKeyboard(
         formatActiveButton("Aᴅᴍɪɴ", active === "ADMIN"),
         HELP_ACTIONS.ADMIN,
       )
-      .style(active === "ADMIN" ? "primary" : undefined);
+      .style(active === "ADMIN" ? "danger" : undefined);
   }
   keyboard.url("GɪᴛHᴜʙ Rᴇᴘᴏ", "https://github.com/TeamArchon");
   keyboard.row().url("📢 Uᴘᴅᴀᴛᴇs", UPDATES_CHANNEL).danger();
