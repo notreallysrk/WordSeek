@@ -52,7 +52,7 @@ export function getMainHelpKeyboard(
       formatActiveButton("Hᴏᴡ Tᴏ Pʟᴀʏ", active === "HOWTO"),
       HELP_ACTIONS.HOWTO,
     )
-    .style(active === "HOWTO" ? "success" : undefined)
+    .style(active === "HOWTO" ? "primary" : undefined)
     .text(
       formatActiveButton("Lᴇᴀᴅᴇʀʙᴏᴀʀᴅ", active === "SCORES"),
       HELP_ACTIONS.SCORES,
@@ -68,7 +68,7 @@ export function getMainHelpKeyboard(
       formatActiveButton("Oᴛʜᴇʀ", active === "OTHER"),
       HELP_ACTIONS.OTHER,
     )
-    .style(active === "OTHER" ? "success" : undefined);
+    .style(active === "OTHER" ? "primary" : undefined);
 
   if (shouldShowAdmin) {
     keyboard
