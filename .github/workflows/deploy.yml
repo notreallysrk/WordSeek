@@ -43,6 +43,11 @@ jobs:
           HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
         run: docker push registry.heroku.com/wordseek/worker
 
+      - name: Run database migrations
+        env:
+          HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
+        run: heroku run --app wordseek --type worker bun run db:migrate
+
       - name: Release worker
         env:
           HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
