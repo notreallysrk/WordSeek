@@ -13,29 +13,29 @@ const composer = new Composer();
 export function getStartKeyboard(ctx: Context) {
   return new InlineKeyboard()
     .url(
-      "Add me to your Group",
+      "Aᴅᴅ Mᴇ Tᴏ Yᴏᴜʀ Gʀᴏᴜᴘ",
       `https://t.me/${ctx.me.username}?startgroup=true`,
     )
     .row()
-    .url("Updates", UPDATES_CHANNEL)
-    .text("Help", HELP_ACTIONS.HOWTO)
-    .url("Discussion", DISCUSSION_GROUP)
+    .url("Uᴘᴅᴀᴛᴇs", UPDATES_CHANNEL)
+    .text("Hᴇʟᴘ", HELP_ACTIONS.HOWTO)
+    .url("Dɪsᴄᴜssɪᴏɴ", DISCUSSION_GROUP)
     .row()
-    .url("💓 Donate", DONATION_LINK)
+    .url("💓 Dᴏɴᴀᴛᴇ", DONATION_LINK)
     .success();
 }
 
 export function getStartMessage() {
-  return `<b>Welcome to WordSeek!</b>
+  return `<b>Wᴇʟᴄᴏᴍᴇ Tᴏ WᴏʀᴅSᴇᴇᴋ!</b>
 
-A fun and competitive Wordle-style game that you can play directly on Telegram.
+A Fᴜɴ Aɴᴅ Cᴏᴍᴘᴇᴛɪᴛɪᴠᴇ Wᴏʀᴅʟᴇ-Sᴛʏʟᴇ Gᴀᴍᴇ Tʜᴀᴛ Yᴏᴜ Cᴀɴ Pʟᴀʏ Dɪʀᴇᴄᴛʟʏ Oɴ Tᴇʟᴇɢʀᴀᴍ.
 
-<blockquote><b>Quick Start:</b>
-• Use /new to start a new game
-• Add me to a group with admin permissions to play with friends
-• Use /help for detailed instructions and command list</blockquote>
+<blockquote><b>Qᴜɪᴄᴋ Sᴛᴀʀᴛ:</b>
+• Uꜱᴇ /New Tᴏ Sᴛᴀʀᴛ A Nᴇᴡ Gᴀᴍᴇ
+• Aᴅᴅ Mᴇ Tᴏ A Gʀᴏᴜᴘ Wɪᴛʜ Aᴅᴍɪɴ Pᴇʀᴍɪꜱꜱɪᴏɴꜱ Tᴏ Pʟᴀʏ Wɪᴛʜ Fʀɪᴇɴᴅꜱ
+• Uꜱᴇ /Help Fᴏʀ Dᴇᴛᴀɪʟᴇᴅ Iɴꜱᴛʀᴜᴄᴛɪᴏɴꜱ Aɴᴅ Cᴏᴍᴍᴀɴᴅ Lɪꜱᴛ</blockquote>
 
-Ready to test your word skills? Let's play!`;
+Rᴇᴀᴅʏ Tᴏ Tᴇꜱᴛ Yᴏᴜʀ Wᴏʀᴅ Sᴋɪʟʟꜱ? Lᴇᴛ'ꜱ Pʟᴀʏ!`;
 }
 
 composer.command("start", async (ctx) => {
