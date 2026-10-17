@@ -80,9 +80,9 @@ export function getMainHelpKeyboard(
       .style(active === "ADMIN" ? "primary" : undefined);
   }
   keyboard.url("GɪᴛHᴜʙ Rᴇᴘᴏ", "https://github.com/TeamArchon");
-  keyboard.row().url("📢 Uᴘᴅᴀᴛᴇs", UPDATES_CHANNEL);
+  keyboard.row().url("📢 Uᴘᴅᴀᴛᴇs", UPDATES_CHANNEL).danger();
   keyboard.url("💓 Dᴏɴᴀᴛᴇ", DONATION_LINK).success();
-  keyboard.url("💬 Dɪsᴄᴜssɪᴏɴ", DISCUSSION_GROUP);
+  keyboard.url("💬 Sᴜᴘᴘᴏʀᴛ", DISCUSSION_GROUP).primary();
 
   if (active !== "HOWTO") {
     keyboard.row().text("Hᴇʟᴘ Mᴇɴᴜ", HELP_ACTIONS.HOWTO);
